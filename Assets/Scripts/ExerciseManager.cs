@@ -8,14 +8,16 @@ public class ExerciseManager : MonoBehaviour
     public TMP_InputField inputField; // Assign in inspector
     public Button doneButton; // Assign in inspector
     public TMP_Text resultsText; // Assign in inspector
+    public Button restartButton;  // restart button
 
     private string correctSentence;
 
     void Start()
     {
-        correctSentence = "The quick brown fox jumps over the lazy dog."; // Set the sentence
+        correctSentence = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"; // Set the sentence
         exerciseText.text = correctSentence;
         doneButton.onClick.AddListener(CheckInput);
+        restartButton.onClick.AddListener(RestartExercise);
 
         resultsText.text = "";
     }
@@ -33,5 +35,18 @@ public class ExerciseManager : MonoBehaviour
 
         inputField.gameObject.SetActive(false); // Hide the keyboard/input field
         doneButton.gameObject.SetActive(false); // Optionally hide the done button
+    }
+
+    public void RestartExercise()
+    {
+        inputField.text = ""; // Clear the input field
+        resultsText.text = ""; // Clear the results text
+
+        inputField.gameObject.SetActive(true); // Show the input field again
+        inputField.ForceLabelUpdate();
+        doneButton.gameObject.SetActive(true); // Show the done button again
+
+        // Optionally, reset any other states or variables if needed
+
     }
 }
