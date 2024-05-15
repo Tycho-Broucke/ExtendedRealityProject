@@ -27,6 +27,6 @@ public class Cube : MonoBehaviour
     {
         float newPosition = Mathf.Lerp(0.44f, -0.44f, amount);
 
-        transform.position = new Vector3(newPosition, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y, newPosition);
     }
 }
