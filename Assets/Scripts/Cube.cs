@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Material cubeMaterial;
+
     void Start()
     {
-        
+        cubeMaterial = GetComponent<Renderer>().material;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeColorRandomly()
     {
-        
-    }
+        float r = Random.value;
+        float g = Random.value;
+        float b = Random.value;
 
+        cubeMaterial.color = new Color(r, g, b);
+    }
+    
     public void MoveUpDown(float amount)
     {
-        float newPosition = Mathf.Lerp(3f, 0.27f, amount);
+        float newPosition = Mathf.Lerp(3f, 1.27f, amount);
 
         transform.position = new Vector3(transform.position.x, newPosition, transform.position.z);
     }
