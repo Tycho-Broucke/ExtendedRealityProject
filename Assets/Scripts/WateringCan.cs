@@ -18,7 +18,7 @@ public class WateringCan : MonoBehaviour
 
     public void MoveUpDown(float amount)
     {
-        float newPosition = Mathf.Lerp(0f, 1f, amount);
+        float newPosition = Mathf.Lerp(0.2f, 3f, amount);
 
         transform.position = new Vector3(transform.position.x, newPosition, transform.position.z);
     }
