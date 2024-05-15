@@ -17,6 +17,7 @@ public class ExerciseManager : MonoBehaviour
         correctSentence = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"; // Set the sentence
         exerciseText.text = correctSentence;
         doneButton.onClick.AddListener(CheckInput);
+        restartButton.onClick.AddListener(RestartExercise);
 
         resultsText.text = "";
     }
