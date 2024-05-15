@@ -9,6 +9,7 @@ TagManager:
   - Destroyer
   - MiniWorldCamera
   - Water
+  - WhiteBoard
   layers:
   - Default
   - TransparentFX
