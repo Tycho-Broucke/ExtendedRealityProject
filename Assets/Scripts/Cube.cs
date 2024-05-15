@@ -9,6 +9,10 @@ public class Cube : MonoBehaviour
     void Start()
     {
         cubeMaterial = GetComponent<Renderer>().material;
+        if (cubeMaterial == null)
+        {
+            Debug.Log("Cube has no material");
+        }
     }
 
     public void ChangeColorRandomly()
@@ -19,10 +23,10 @@ public class Cube : MonoBehaviour
 
         cubeMaterial.color = new Color(r, g, b);
     }
-    
+
     public void MoveUpDown(float amount)
     {
-        float newPosition = Mathf.Lerp(3f, 1.27f, amount);
+        float newPosition = Mathf.Lerp(2f, 1.27f, amount);
 
         transform.position = new Vector3(transform.position.x, newPosition, transform.position.z);
     }
