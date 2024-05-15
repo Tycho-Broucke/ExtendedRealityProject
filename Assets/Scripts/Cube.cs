@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
-    private Material cubeMaterial;
+    private MeshRenderer cubeRenderer;
 
     void Start()
     {
-        cubeMaterial = GetComponent<Renderer>().material;
-        if (cubeMaterial == null)
+        if (!TryGetComponent<MeshRenderer>(out cubeRenderer))
         {
-            Debug.Log("Cube has no material");
+            Debug.LogError("Object does not have a MeshRenderer component.");
         }
     }
 
@@ -21,7 +20,7 @@ public class Cube : MonoBehaviour
         float g = Random.value;
         float b = Random.value;
 
-        cubeMaterial.color = new Color(r, g, b);
+        cubeRenderer.material.color = new Color(r, g, b);
     }
 
     public void MoveUpDown(float amount)
