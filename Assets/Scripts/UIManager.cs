@@ -7,6 +7,7 @@ public class Question
 {
     public string questionText = "test";
     public string[] answers = new string[3];
+    public int correctAnswerIndex; // Add correct answer index
 }
 
 public class UIManager : MonoBehaviour
@@ -26,10 +27,13 @@ public class UIManager : MonoBehaviour
     public Button optionButton3;
     public TMP_Text optionButton3Text;
 
+    public TMP_Text scoreText; // Add score text
+
     [Header("Questions and Answers")]
     public Question[] questions;
 
     private int currentQuestionIndex = -1;
+    private int score = 0;
 
     private void Start()
     {
@@ -38,6 +42,9 @@ public class UIManager : MonoBehaviour
 
         // Initialize questions
         InitializeQuestions();
+
+        // Initialize score
+        UpdateScoreText();
     }
 
     private void InitializeQuestions()
@@ -47,17 +54,20 @@ public class UIManager : MonoBehaviour
             new Question
             {
                 questionText = "What is the capital of France?",
-                answers = new string[] { "Paris", "London", "Berlin" }
+                answers = new string[] { "Paris", "London", "Berlin" },
+                correctAnswerIndex = 0 // Set correct answer index
             },
             new Question
             {
                 questionText = "What is 2 + 2?",
-                answers = new string[] { "3", "4", "5" }
+                answers = new string[] { "3", "4", "5" },
+                correctAnswerIndex = 1 // Set correct answer index
             },
             new Question
             {
                 questionText = "What is the chemical symbol for water?",
-                answers = new string[] { "H2O", "O2", "CO2" }
+                answers = new string[] { "H2O", "O2", "CO2" },
+                correctAnswerIndex = 0 // Set correct answer index
             }
         };
     }
@@ -134,6 +144,7 @@ public class UIManager : MonoBehaviour
         {
             Debug.Log($"Setting visibility of {button.name} to {isVisible}");
             button.transform.localScale = isVisible ? new Vector3(1, 1, 1) : new Vector3(0, 0, 0);
+            Debug.Log($"{button.name} active state: {button.gameObject.activeSelf}, scale: {button.transform.localScale}");
         }
     }
 
@@ -148,6 +159,33 @@ public class UIManager : MonoBehaviour
     public void OnOptionButtonClick(int optionIndex)
     {
         Debug.Log("Option " + optionIndex + " clicked.");
-        LoadNextQuestion();
+
+        if (currentQuestionIndex < questions.Length)
+        {
+            // Check if the selected option is correct
+            if (optionIndex-1 == questions[currentQuestionIndex].correctAnswerIndex)
+            {
+                score += 10; // Increase score by 10 for a correct answer
+                Debug.Log("Correct answer! Score: " + score);
+            }
+            else
+            {
+                Debug.Log("Incorrect answer.");
+            }
+
+            // Update the score text
+            UpdateScoreText();
+
+            // Load next question
+            LoadNextQuestion();
+        }
+    }
+
+    private void UpdateScoreText()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
+        }
     }
 }
