@@ -7368,7 +7368,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384548281}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &384548283
 Camera:
   m_ObjectHideFlags: 0
@@ -7429,7 +7429,7 @@ Transform:
   m_GameObject: {fileID: 384548281}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09712622, y: 0.7002127, z: -0.0955291, w: 0.7008159}
-  m_LocalPosition: {x: 25.02, y: 4.53, z: -4.8}
+  m_LocalPosition: {x: 25.938, y: 4.94, z: -4.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12551,7 +12551,7 @@ GameObject:
   - component: {fileID: 762939367}
   - component: {fileID: 762939366}
   m_Layer: 5
-  m_Name: Step Interaction Button (2)
+  m_Name: Step Interaction Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12584,7 +12584,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762939363}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 
@@ -19237,7 +19237,7 @@ GameObject:
   - component: {fileID: 1170816285}
   - component: {fileID: 1170816284}
   m_Layer: 5
-  m_Name: Step Interaction Button (3)
+  m_Name: Step Interaction Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19270,7 +19270,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170816281}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 
@@ -22194,12 +22194,13 @@ MonoBehaviour:
   mainText: {fileID: 153324627}
   progressionButton: {fileID: 492524518}
   progressionButtonText: {fileID: 241354558}
-  optionButton1: {fileID: 1184124477}
-  optionButton1Text: {fileID: 328464226}
-  optionButton2: {fileID: 322331772}
-  optionButton2Text: {fileID: 383279427}
-  optionButton3: {fileID: 322331772}
-  optionButton3Text: {fileID: 383279427}
+  optionButton1: {fileID: 322331772}
+  optionButton1Text: {fileID: 383279427}
+  optionButton2: {fileID: 1474042902}
+  optionButton2Text: {fileID: 735385408}
+  optionButton3: {fileID: 1184124477}
+  optionButton3Text: {fileID: 328464226}
+  questions: []
 --- !u!1001 &1327221153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26087,7 +26088,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565037761}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 
@@ -28304,7 +28305,7 @@ GameObject:
   - component: {fileID: 1713499969}
   - component: {fileID: 1713499968}
   m_Layer: 5
-  m_Name: Step Interaction Button (1)
+  m_Name: Step Interaction Button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28337,7 +28338,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713499965}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 

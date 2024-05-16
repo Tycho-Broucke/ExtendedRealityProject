@@ -65,6 +65,7 @@ public class UIManager : MonoBehaviour
     public void StartGame()
     {
         // Hide the progression button and show the option buttons
+        Debug.Log("StartGame called");
         SetButtonVisibility(progressionButton, false);
         LoadNextQuestion();
     }
@@ -99,35 +100,8 @@ public class UIManager : MonoBehaviour
             if (optionButton3Text != null) optionButton3Text.text = question.answers[2];
         }
 
-        // Make sure all option buttons are visible and positioned correctly
+        // Make sure all option buttons are visible
         SetAllOptionButtonsVisibility(true);
-        SetOptionButtonsPosition();
-    }
-
-    private void SetOptionButtonsPosition()
-    {
-        if (progressionButton != null)
-        {
-            RectTransform progressionButtonRT = progressionButton.GetComponent<RectTransform>();
-
-            if (optionButton1 != null)
-            {
-                RectTransform rt1 = optionButton1.GetComponent<RectTransform>();
-                rt1.anchoredPosition = new Vector2(progressionButtonRT.anchoredPosition.x - 200, progressionButtonRT.anchoredPosition.y);
-            }
-
-            if (optionButton2 != null)
-            {
-                RectTransform rt2 = optionButton2.GetComponent<RectTransform>();
-                rt2.anchoredPosition = new Vector2(progressionButtonRT.anchoredPosition.x, progressionButtonRT.anchoredPosition.y);
-            }
-
-            if (optionButton3 != null)
-            {
-                RectTransform rt3 = optionButton3.GetComponent<RectTransform>();
-                rt3.anchoredPosition = new Vector2(progressionButtonRT.anchoredPosition.x + 200, progressionButtonRT.anchoredPosition.y);
-            }
-        }
     }
 
     public void SetHeaderText(string text)
@@ -158,12 +132,14 @@ public class UIManager : MonoBehaviour
     {
         if (button != null)
         {
-            button.gameObject.SetActive(isVisible);
+            Debug.Log($"Setting visibility of {button.name} to {isVisible}");
+            button.transform.localScale = isVisible ? new Vector3(1, 1, 1) : new Vector3(0, 0, 0);
         }
     }
 
     public void SetAllOptionButtonsVisibility(bool isVisible)
     {
+        Debug.Log($"Setting all option buttons visibility to {isVisible}");
         SetButtonVisibility(optionButton1, isVisible);
         SetButtonVisibility(optionButton2, isVisible);
         SetButtonVisibility(optionButton3, isVisible);
