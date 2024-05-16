@@ -68,6 +68,48 @@ public class UIManager : MonoBehaviour
                 questionText = "What is the chemical symbol for water?",
                 answers = new string[] { "H2O", "O2", "CO2" },
                 correctAnswerIndex = 0 // Set correct answer index
+            },
+            new Question
+            {
+                questionText = "Which planet is known as the Red Planet?",
+                answers = new string[] { "Mars", "Earth", "Jupiter" },
+                correctAnswerIndex = 0 // Set correct answer index
+            },
+            new Question
+            {
+                questionText = "Who wrote 'Romeo and Juliet'?",
+                answers = new string[] { "Mark Twain", "William Shakespeare", "Charles Dickens" },
+                correctAnswerIndex = 1 // Set correct answer index
+            },
+            new Question
+            {
+                questionText = "What is the speed of light?",
+                answers = new string[] { "300,000 km/s", "150,000 km/s", "450,000 km/s" },
+                correctAnswerIndex = 0 // Set correct answer index
+            },
+            new Question
+            {
+                questionText = "What is the largest mammal in the world?",
+                answers = new string[] { "Elephant", "Blue Whale", "Giraffe" },
+                correctAnswerIndex = 1 // Set correct answer index
+            },
+            new Question
+            {
+                questionText = "What is the smallest prime number?",
+                answers = new string[] { "1", "2", "3" },
+                correctAnswerIndex = 1 // Set correct answer index
+            },
+            new Question
+            {
+                questionText = "What element does 'O' represent on the periodic table?",
+                answers = new string[] { "Osmium", "Oxygen", "Oganesson" },
+                correctAnswerIndex = 1 // Set correct answer index
+            },
+            new Question
+            {
+                questionText = "Which ocean is the largest?",
+                answers = new string[] { "Atlantic Ocean", "Indian Ocean", "Pacific Ocean" },
+                correctAnswerIndex = 2 // Set correct answer index
             }
         };
     }
@@ -93,6 +135,12 @@ public class UIManager : MonoBehaviour
             Debug.Log("All questions answered!");
             // Optionally, hide the option buttons
             SetAllOptionButtonsVisibility(false);
+            // Show Try Again button
+            SetButtonVisibility(progressionButton, true);
+            SetProgressionButtonText("Try Again");
+            // Attach the TryAgain function to the button click event
+            progressionButton.onClick.RemoveAllListeners();
+            progressionButton.onClick.AddListener(TryAgain);
         }
     }
 
@@ -187,5 +235,16 @@ public class UIManager : MonoBehaviour
         {
             scoreText.text = "Score: " + score;
         }
+    }
+
+    public void TryAgain()
+    {
+        // Reset the game state
+        score = 0;
+        currentQuestionIndex = -1;
+        UpdateScoreText();
+
+        // Start the game again
+        StartGame();
     }
 }
