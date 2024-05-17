@@ -43,7 +43,9 @@ public class UIManager : MonoBehaviour
     [Header("3D Models")]
     public GameObject flagOfSpainModel; // Reference to the 3D model of the flag of Spain
     public GameObject TRexModel; // Reference to the 3D model for the third question
-
+    public GameObject VaderModel;
+    public GameObject SaturnusModel;
+    public GameObject BikeModel;
     private void Start()
     {
         // Ensure option buttons are initially invisible
@@ -82,21 +84,21 @@ public class UIManager : MonoBehaviour
             },
             new Question
             {
-                questionText = "Which planet is known as the Red Planet?",
-                answers = new string[] { "Mars", "Earth", "Jupiter" },
+                questionText = "From which movie series is this character?",
+                answers = new string[] { "Star wars", "Pokemon", "Jupiter" },
                 correctAnswerIndex = 0,
             },
             new Question
             {
-                questionText = "Who wrote 'Romeo and Juliet'?",
-                answers = new string[] { "Mark Twain", "William Shakespeare", "Charles Dickens" },
+                questionText = "What is the name of the planet below?",
+                answers = new string[] { "Venus", "Saturn", "Jupiter" },
                 correctAnswerIndex = 1,
             },
             new Question
             {
-                questionText = "What is the speed of light?",
-                answers = new string[] { "300,000 km/s", "150,000 km/s", "450,000 km/s" },
-                correctAnswerIndex = 0,
+                questionText = "Who won last the Tour de France in 2023?",
+                answers = new string[] { "Pogacar", "Wout van Aert", "Vingegaar" },
+                correctAnswerIndex = 2,
             },
             new Question
             {
@@ -196,17 +198,34 @@ public class UIManager : MonoBehaviour
                 TRexModel.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
                 flagOfSpainModel.transform.localScale = Vector3.zero; // Adjust scale as needed
             }
+            else if (currentQuestionIndex == 3 && VaderModel != null)
+            {
+                VaderModel.transform.localScale = new Vector3(5f, 5f, 5f);
+                TRexModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
+            }
+            else if (currentQuestionIndex == 4 && SaturnusModel != null)
+            {
+                SaturnusModel.transform.localScale = new Vector3(0.001f, 0.001f,0.001f);
+                VaderModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
+
+            }
+            else if (currentQuestionIndex == 5 && BikeModel != null)
+            {
+                BikeModel.transform.localScale = new Vector3(10f, 10f,10f);
+                SaturnusModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
+
+            }
             else
             {
-                if (flagOfSpainModel != null)
-                {
-                    flagOfSpainModel.transform.localScale = Vector3.zero; // Make the flag invisible for other questions
-                }
 
-                if (TRexModel != null)
-                {
-                    TRexModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
-                }
+                    flagOfSpainModel.transform.localScale = Vector3.zero; // Make the flag invisible for other questions
+                    TRexModel.transform.localScale = Vector3.zero; // Adjust scale as needed
+                    SaturnusModel.transform.localScale = Vector3.zero; // Adjust scale as needed
+                    VaderModel.transform.localScale = Vector3.zero; // Adjust scale as needed
+                    BikeModel.transform.localScale = Vector3.zero; 
+
+                    
+                
             }
         }
     }
