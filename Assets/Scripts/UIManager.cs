@@ -7,7 +7,7 @@ public class Question
 {
     public string questionText = "test";
     public string[] answers = new string[3];
-    public int correctAnswerIndex; // Add correct answer index
+    public int correctAnswerIndex;
 }
 
 public class UIManager : MonoBehaviour
@@ -27,13 +27,22 @@ public class UIManager : MonoBehaviour
     public Button optionButton3;
     public TMP_Text optionButton3Text;
 
-    public TMP_Text scoreText; // Add score text
+    public TMP_Text scoreText;
 
     [Header("Questions and Answers")]
     public Question[] questions;
 
     private int currentQuestionIndex = -1;
     private int score = 0;
+
+    [Header("Table Reference")]
+    public Transform tableTransform; // Reference to the table transform
+
+    private GameObject currentFigure; // To keep track of the current 3D figure
+
+    [Header("3D Models")]
+    public GameObject flagOfSpainModel; // Reference to the 3D model of the flag of Spain
+    public GameObject TRexModel; // Reference to the 3D model for the third question
 
     private void Start()
     {
@@ -45,6 +54,8 @@ public class UIManager : MonoBehaviour
 
         // Initialize score
         UpdateScoreText();
+
+
     }
 
     private void InitializeQuestions()
@@ -53,63 +64,63 @@ public class UIManager : MonoBehaviour
         {
             new Question
             {
-                questionText = "What is the capital of France?",
-                answers = new string[] { "Paris", "London", "Berlin" },
-                correctAnswerIndex = 0 // Set correct answer index
+                questionText = "What is the formula to calculate the volume of a sphere?",
+                answers = new string[] { "4/3 π r³", "π r²", "2πr" },
+                correctAnswerIndex = 0,
             },
             new Question
             {
-                questionText = "What is 2 + 2?",
-                answers = new string[] { "3", "4", "5" },
-                correctAnswerIndex = 1 // Set correct answer index
+                questionText = "From which country is the flag you see below?",
+                answers = new string[] { "Portugal", "Spain", "Italy" },
+                correctAnswerIndex = 1,
             },
             new Question
             {
-                questionText = "What is the chemical symbol for water?",
-                answers = new string[] { "H2O", "O2", "CO2" },
-                correctAnswerIndex = 0 // Set correct answer index
+                questionText = "What kind of dinosaur is displayed below?",
+                answers = new string[] { "Spinosaurus", "Carnotaurus", "T-rex" },
+                correctAnswerIndex = 2,
             },
             new Question
             {
                 questionText = "Which planet is known as the Red Planet?",
                 answers = new string[] { "Mars", "Earth", "Jupiter" },
-                correctAnswerIndex = 0 // Set correct answer index
+                correctAnswerIndex = 0,
             },
             new Question
             {
                 questionText = "Who wrote 'Romeo and Juliet'?",
                 answers = new string[] { "Mark Twain", "William Shakespeare", "Charles Dickens" },
-                correctAnswerIndex = 1 // Set correct answer index
+                correctAnswerIndex = 1,
             },
             new Question
             {
                 questionText = "What is the speed of light?",
                 answers = new string[] { "300,000 km/s", "150,000 km/s", "450,000 km/s" },
-                correctAnswerIndex = 0 // Set correct answer index
+                correctAnswerIndex = 0,
             },
             new Question
             {
                 questionText = "What is the largest mammal in the world?",
                 answers = new string[] { "Elephant", "Blue Whale", "Giraffe" },
-                correctAnswerIndex = 1 // Set correct answer index
+                correctAnswerIndex = 1,
             },
             new Question
             {
                 questionText = "What is the smallest prime number?",
                 answers = new string[] { "1", "2", "3" },
-                correctAnswerIndex = 1 // Set correct answer index
+                correctAnswerIndex = 1,
             },
             new Question
             {
                 questionText = "What element does 'O' represent on the periodic table?",
                 answers = new string[] { "Osmium", "Oxygen", "Oganesson" },
-                correctAnswerIndex = 1 // Set correct answer index
+                correctAnswerIndex = 1,
             },
             new Question
             {
                 questionText = "Which ocean is the largest?",
                 answers = new string[] { "Atlantic Ocean", "Indian Ocean", "Pacific Ocean" },
-                correctAnswerIndex = 2 // Set correct answer index
+                correctAnswerIndex = 2,
             }
         };
     }
@@ -160,6 +171,44 @@ public class UIManager : MonoBehaviour
 
         // Make sure all option buttons are visible
         SetAllOptionButtonsVisibility(true);
+
+        // Handle 3D figure creation for specific questions
+        if (currentFigure != null)
+        {
+            Destroy(currentFigure);
+            currentFigure = null;
+        }
+
+        if (tableTransform != null)
+        {
+            if (currentQuestionIndex == 0)
+            {
+                currentFigure = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                currentFigure.transform.position = tableTransform.position + new Vector3(0, 0.6f, 0); // Adjust position to be a bit above the table
+                currentFigure.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); // Make the sphere smaller
+            }
+            else if (currentQuestionIndex == 1 && flagOfSpainModel != null)
+            {
+                flagOfSpainModel.transform.localScale = new Vector3(50f, 50f, 50f); // Adjust scale as needed
+            }
+            else if (currentQuestionIndex == 2 && TRexModel != null)
+            {
+                TRexModel.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+                flagOfSpainModel.transform.localScale = Vector3.zero; // Adjust scale as needed
+            }
+            else
+            {
+                if (flagOfSpainModel != null)
+                {
+                    flagOfSpainModel.transform.localScale = Vector3.zero; // Make the flag invisible for other questions
+                }
+
+                if (TRexModel != null)
+                {
+                    TRexModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
+                }
+            }
+        }
     }
 
     public void SetHeaderText(string text)
@@ -211,7 +260,7 @@ public class UIManager : MonoBehaviour
         if (currentQuestionIndex < questions.Length)
         {
             // Check if the selected option is correct
-            if (optionIndex-1 == questions[currentQuestionIndex].correctAnswerIndex)
+            if (optionIndex - 1 == questions[currentQuestionIndex].correctAnswerIndex)
             {
                 score += 10; // Increase score by 10 for a correct answer
                 Debug.Log("Correct answer! Score: " + score);
