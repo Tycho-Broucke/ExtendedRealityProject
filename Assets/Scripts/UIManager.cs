@@ -124,7 +124,7 @@ public class UIManager : MonoBehaviour
             },
             new Question
             {
-                questionText = " When a jet breaks the sound barrier, it is traveling at speeds around ... km/h ?",
+                questionText = " When a jet breaks the sound barrier, it is flying at around ... km/h ?",
                 answers = new string[] { "1495", "300", "1,235 " },
                 correctAnswerIndex = 2,
             }
