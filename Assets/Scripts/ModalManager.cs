@@ -16,12 +16,11 @@ public class ModalManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        modalPanel.SetActive(true);
+        modalPanel.SetActive(false);
     }
 
     public void ShowModal(string title, string description, Sprite image)
     {
-        Debug.Log("ShowModal");
         titleText.text = title;
         descriptionText.text = description;
         eventImage.sprite = image;
@@ -31,7 +30,6 @@ public class ModalManager : MonoBehaviour
 
     public void CloseModal()
     {
-        Debug.Log("CloseModal");
         modalPanel.SetActive(false);
     }
 }
