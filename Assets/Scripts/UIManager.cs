@@ -48,6 +48,8 @@ public class UIManager : MonoBehaviour
     public GameObject BikeModel;
     public GameObject ElephantModel;
     public GameObject CalculatorModel;
+    public GameObject GoldModel;
+    public GameObject PlaneModel;
     private void Start()
     {
         // Ensure option buttons are initially invisible
@@ -116,14 +118,14 @@ public class UIManager : MonoBehaviour
             },
             new Question
             {
-                questionText = "What element does 'O' represent on the periodic table?",
-                answers = new string[] { "Osmium", "Oxygen", "Oganesson" },
-                correctAnswerIndex = 1,
+                questionText = "What is the symbol of gold in the periodic table?",
+                answers = new string[] { "Au", "Gd", "Go" },
+                correctAnswerIndex = 0,
             },
             new Question
             {
-                questionText = "Which ocean is the largest?",
-                answers = new string[] { "Atlantic Ocean", "Indian Ocean", "Pacific Ocean" },
+                questionText = " When a jet breaks the sound barrier, it is traveling at speeds around ... km/h ?",
+                answers = new string[] { "1495", "300", "1,235 " },
                 correctAnswerIndex = 2,
             }
         };
@@ -230,6 +232,18 @@ public class UIManager : MonoBehaviour
                 ElephantModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
 
             }
+            else if (currentQuestionIndex == 8 && GoldModel!= null)
+            {
+                GoldModel.transform.localScale = new Vector3(10f,10f,10f);
+                CalculatorModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
+
+            }
+            else if (currentQuestionIndex == 9 && PlaneModel!= null)
+            {
+                PlaneModel.transform.localScale = new Vector3(0.05f,0.05f,0.05f);
+                GoldModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
+
+            }
             else
             {
 
@@ -240,7 +254,8 @@ public class UIManager : MonoBehaviour
                     BikeModel.transform.localScale = Vector3.zero; 
                     ElephantModel.transform.localScale=Vector3.zero;
                     CalculatorModel.transform.localScale=Vector3.zero;
-                    
+                    GoldModel.transform.localScale=Vector3.zero;
+                    PlaneModel.transform.localScale=Vector3.zero;
                 
             }
         }
@@ -327,7 +342,7 @@ public class UIManager : MonoBehaviour
         score = 0;
         currentQuestionIndex = -1;
         UpdateScoreText();
-
+        PlaneModel.transform.localScale=Vector3.zero;   
         // Start the game again
         StartGame();
     }
