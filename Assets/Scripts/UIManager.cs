@@ -46,6 +46,8 @@ public class UIManager : MonoBehaviour
     public GameObject VaderModel;
     public GameObject SaturnusModel;
     public GameObject BikeModel;
+    public GameObject ElephantModel;
+    public GameObject CalculatorModel;
     private void Start()
     {
         // Ensure option buttons are initially invisible
@@ -85,7 +87,7 @@ public class UIManager : MonoBehaviour
             new Question
             {
                 questionText = "From which movie series is this character?",
-                answers = new string[] { "Star wars", "Pokemon", "Jupiter" },
+                answers = new string[] { "Star wars", "Pokemon", "Harry Potter" },
                 correctAnswerIndex = 0,
             },
             new Question
@@ -97,7 +99,7 @@ public class UIManager : MonoBehaviour
             new Question
             {
                 questionText = "Who won last the Tour de France in 2023?",
-                answers = new string[] { "Pogacar", "Wout van Aert", "Vingegaar" },
+                answers = new string[] { "Pogacar", "Wout van Aert", "Vingegaard" },
                 correctAnswerIndex = 2,
             },
             new Question
@@ -146,6 +148,7 @@ public class UIManager : MonoBehaviour
         {
             // No more questions, handle accordingly
             Debug.Log("All questions answered!");
+            mainText.text = "All questions answered!";
             // Optionally, hide the option buttons
             SetAllOptionButtonsVisibility(false);
             // Show Try Again button
@@ -215,6 +218,18 @@ public class UIManager : MonoBehaviour
                 SaturnusModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
 
             }
+            else if (currentQuestionIndex == 6 && ElephantModel != null)
+            {
+                ElephantModel.transform.localScale = new Vector3(0.06f,0.06f,0.06f);
+                BikeModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
+
+            }
+            else if (currentQuestionIndex == 7 && CalculatorModel!= null)
+            {
+                CalculatorModel.transform.localScale = new Vector3(200f,200f,200f);
+                ElephantModel.transform.localScale = Vector3.zero; // Make the chemical symbol model invisible for other questions
+
+            }
             else
             {
 
@@ -223,7 +238,8 @@ public class UIManager : MonoBehaviour
                     SaturnusModel.transform.localScale = Vector3.zero; // Adjust scale as needed
                     VaderModel.transform.localScale = Vector3.zero; // Adjust scale as needed
                     BikeModel.transform.localScale = Vector3.zero; 
-
+                    ElephantModel.transform.localScale=Vector3.zero;
+                    CalculatorModel.transform.localScale=Vector3.zero;
                     
                 
             }
