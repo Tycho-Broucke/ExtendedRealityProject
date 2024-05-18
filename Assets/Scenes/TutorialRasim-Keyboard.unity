@@ -228,7 +228,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -2467,7 +2467,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -2727,7 +2727,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -4685,7 +4685,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -4945,7 +4945,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -5234,7 +5234,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -7065,7 +7065,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -7895,55 +7895,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &306135554
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 306135556}
-  - component: {fileID: 306135555}
-  m_Layer: 0
-  m_Name: ExerciseManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &306135555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306135554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d28dd815681bb7e4d95ef26f42bb806f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exerciseText: {fileID: 0}
-  inputField: {fileID: 0}
-  doneButton: {fileID: 0}
-  resultsText: {fileID: 0}
-  restartButton: {fileID: 0}
---- !u!4 &306135556
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306135554}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1818435940}
-  m_LocalEulerAnglesHint: {x: 0, y: -89.864, z: 0}
 --- !u!1 &310310082
 GameObject:
   m_ObjectHideFlags: 0
@@ -8215,7 +8166,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -8820,7 +8771,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -9109,7 +9060,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -10329,7 +10280,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -10622,7 +10573,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -13606,45 +13557,113 @@ PrefabInstance:
       propertyPath: m_Name
       value: Complete XR Origin Set Up
       objectReference: {fileID: 0}
-    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - target: {fileID: 8047140479014348783, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.248896
       objectReference: {fileID: 0}
-    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - target: {fileID: 8047140479014348783, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047140479014348783, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.595
+      value: 0.22651082
       objectReference: {fileID: 0}
-    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - target: {fileID: 8047140479014348783, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - target: {fileID: 8047140479014348783, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - target: {fileID: 8047140479014348783, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+    - target: {fileID: 8047140479014348783, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8047140479014348783, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6439529
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1848793
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059801596075752103, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0000004246831
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.56000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99947494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.032401957
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 8650654345620415483, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: -3.714
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650654345800171482, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650654345800171482, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650654345800171482, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14695,7 +14714,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -15743,7 +15762,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -16668,7 +16687,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -18671,7 +18690,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -18961,7 +18980,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -20218,7 +20237,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -21550,7 +21569,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -21743,89 +21762,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &933829314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 933829315}
-  - component: {fileID: 933829317}
-  - component: {fileID: 933829316}
-  m_Layer: 0
-  m_Name: Camera Representation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &933829315
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933829314}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.125, y: 0.125, z: 0.375}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1633376975}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &933829316
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933829314}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &933829317
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933829314}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &949773998
 GameObject:
   m_ObjectHideFlags: 0
@@ -25089,7 +25025,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -25627,7 +25563,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -25774,6 +25710,55 @@ MonoBehaviour:
   m_Description: 4. Socket Interactables
   m_BlockUntilComplete: 0
   m_AutoProgressOnComplete: 1
+--- !u!1 &1131710187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131710188}
+  - component: {fileID: 1131710189}
+  m_Layer: 0
+  m_Name: ExerciseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1131710188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131710187}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7062661, z: -0, w: 0.70794654}
+  m_LocalPosition: {x: 10.363126, y: -2.336, z: -11.122346}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1818435940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1131710189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131710187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28dd815681bb7e4d95ef26f42bb806f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exerciseText: {fileID: 1159342999}
+  inputField: {fileID: 1983930109}
+  doneButton: {fileID: 652126424}
+  resultsText: {fileID: 733324474}
+  restartButton: {fileID: 1571294180}
 --- !u!1 &1145037163
 GameObject:
   m_ObjectHideFlags: 0
@@ -25879,7 +25864,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -27643,7 +27628,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -27776,7 +27761,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -28034,7 +28019,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2141876690}
-  - {fileID: 1633376975}
   - {fileID: 2015864654}
   m_Father: {fileID: 1902812752}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28265,7 +28249,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -28420,7 +28404,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -28876,7 +28860,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -29031,7 +29015,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -29633,7 +29617,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -29893,7 +29877,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -30374,7 +30358,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -31564,7 +31548,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -31719,7 +31703,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -34305,8 +34289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5fc2ffdd8d344248abcaeefca66c150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 0}
-  canvas: {fileID: 0}
+  inputField: {fileID: 1983930109}
+  canvas: {fileID: 158282142}
 --- !u!4 &1449250467
 Transform:
   m_ObjectHideFlags: 0
@@ -34584,7 +34568,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -34739,7 +34723,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -36169,7 +36153,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -36324,7 +36308,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -38114,135 +38098,6 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611802629}
-  m_Enabled: 0
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!1 &1633376974
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1633376975}
-  - component: {fileID: 1633376977}
-  - component: {fileID: 1633376976}
-  m_Layer: 0
-  m_Name: Camera Position
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1633376975
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633376974}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.61, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 933829315}
-  m_Father: {fileID: 1248412526}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1633376976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633376974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
-  m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
---- !u!20 &1633376977
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633376974}
   m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
@@ -40222,7 +40077,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -41190,13 +41045,13 @@ Transform:
   m_GameObject: {fileID: 1818435939}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7062661, z: -0, w: 0.70794654}
-  m_LocalPosition: {x: -11.146939, y: 2.336, z: -10.336664}
+  m_LocalPosition: {x: -11.146939, y: 1.74, z: -10.336664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1131710188}
   - {fileID: 185411175}
   - {fileID: 1449250467}
-  - {fileID: 306135556}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1823768764
@@ -42582,7 +42437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b422177dd3c8a4eb44616d56d8e45b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CameraTarget: {fileID: 1633376974}
+  m_CameraTarget: {fileID: 0}
   m_TeleportationProvider: {fileID: 594363061}
   m_AudioSource: {fileID: 0}
   m_Visuals: []
@@ -42926,7 +42781,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
@@ -45819,7 +45674,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1449250466}
         m_TargetAssemblyTypeName: KeyboardInputManager, Assembly-CSharp
         m_MethodName: AppendToInputField
         m_Mode: 5
