@@ -4526,7 +4526,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 185411175}
-  - component: {fileID: 185411176}
   m_Layer: 6
   m_Name: Keyboard
   m_TagString: Untagged
@@ -4551,18 +4550,6 @@ Transform:
   - {fileID: 158282138}
   m_Father: {fileID: 1818435940}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &185411176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185411174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e0594c2e07f1ce4896634770cd3e805, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &188716253
 GameObject:
   m_ObjectHideFlags: 0
@@ -23979,11 +23966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -23991,7 +23978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

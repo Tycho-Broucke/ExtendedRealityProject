@@ -12,10 +12,19 @@ public class ExerciseManager : MonoBehaviour
     public Button restartButton;  // restart button
 
     private string correctSentence;
+    // add differtent sentences to display
+    private string[] sentencesToDisplay =
+    {
+        "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG",
+        "you see what you believe",
+        "ThIs iS aN exaMplE sEnTencE, tHat hAs 12345 NumbERS, and ,.';/][ sy$mbols.",
+    };
 
     void Start()
     {
-        correctSentence = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"; // Set the sentence
+        // randomly select a sentence from the array
+        correctSentence = sentencesToDisplay[Random.Range(0, sentencesToDisplay.Length)];
+        // correctSentence = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"; // Set the sentence
         exerciseText.text = correctSentence;
         doneButton.onClick.AddListener(CheckInput);
         restartButton.onClick.AddListener(RestartExercise);
