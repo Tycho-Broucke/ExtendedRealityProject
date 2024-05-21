@@ -18,6 +18,7 @@ public class WhiteBoardMarkerScript : MonoBehaviour
     private bool _touchedLastFrame;
     private Quaternion _lastTouchRot;
     private Color _initialWhiteboardColor;
+    private bool _firstFrame = true;
 
     void Start()
     {
@@ -35,14 +36,20 @@ public class WhiteBoardMarkerScript : MonoBehaviour
             if (renderer != null)
             {
                 _initialWhiteboardColor = renderer.material.color;
+                
             }
         }
+        
         _whiteboard = null;
     }
 
     void Update()
     {
         Draw();
+        if (_firstFrame)
+        {
+            ResetWhiteBoard();
+        }
     }
 
     
@@ -105,10 +112,38 @@ public class WhiteBoardMarkerScript : MonoBehaviour
             Start();
         }
 
-        _penSize = Mathf.RoundToInt((size * 10)+5);  // Scale slider value to pen size
+        
+        _penSize = Mathf.RoundToInt((size * 30)+5);  // Scale slider value to pen size
+
+        if (_initialWhiteboardColor != null)
+        {
+            if (_renderer.material.color == _initialWhiteboardColor)
+            {
+                _penSize = Mathf.RoundToInt((size * 100) + 50);  // Scale slider value to pen size
+            }
+        }
         _colors = Enumerable.Repeat(_renderer.material.color, _penSize * _penSize).ToArray();  // Update color array
     }
 
+    [ContextMenu("pensizezero")]
+    public void SetPenSizeZero()
+    {
+        SetPenSize(0);
+    }
+
+    [ContextMenu("pensizehalf")]
+    public void SetPenSizeHalf()
+    {
+        SetPenSize((float)0.5);
+    }
+
+    [ContextMenu("pensizeone")]
+    public void SetPenSizeOne()
+    {
+        SetPenSize(1);
+    }
+
+    [ContextMenu("redcolor")]
     public void RedColor()
     {
         // Ensure that _renderer is properly initialized
@@ -119,8 +154,10 @@ public class WhiteBoardMarkerScript : MonoBehaviour
 
         // Change the color of the renderer to red
         _renderer.material.color = Color.red;
+        _colors = Enumerable.Repeat(_renderer.material.color, _penSize * _penSize).ToArray();
     }
 
+    [ContextMenu("bluecolor")]
     public void BlueColor()
     {
         // Ensure that _renderer is properly initialized
@@ -131,8 +168,10 @@ public class WhiteBoardMarkerScript : MonoBehaviour
 
         // Change the color of the renderer to blue
         _renderer.material.color = Color.blue;
+        _colors = Enumerable.Repeat(_renderer.material.color, _penSize * _penSize).ToArray();
     }
 
+    [ContextMenu("blackcolor")]
     public void BlackColor()
     {
         // Ensure that _renderer is properly initialized
@@ -143,8 +182,10 @@ public class WhiteBoardMarkerScript : MonoBehaviour
 
         // Change the color of the renderer to black
         _renderer.material.color = Color.black;
+        _colors = Enumerable.Repeat(_renderer.material.color, _penSize * _penSize).ToArray();
     }
 
+    [ContextMenu("eraser")]
     public void eraser()
     {
         // Ensure that _renderer is properly initialized
@@ -158,8 +199,12 @@ public class WhiteBoardMarkerScript : MonoBehaviour
         {
             _renderer.material.color = _initialWhiteboardColor;
         }
+
+
+        _colors = Enumerable.Repeat(_renderer.material.color, _penSize * _penSize).ToArray();
     }
 
+    [ContextMenu("resetwhiteboard")]
     public void ResetWhiteBoard()
     {
         _whiteboard = FindObjectOfType<WhiteBoardScript>();
@@ -175,5 +220,6 @@ public class WhiteBoardMarkerScript : MonoBehaviour
             _whiteboard.texture.Apply();
         }
         _whiteboard = null;
+        _firstFrame = false;
     }
 }
