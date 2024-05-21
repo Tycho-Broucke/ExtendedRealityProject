@@ -7,7 +7,7 @@ using UnityEngine.Rendering.Universal;
 public class WhiteBoardMarkerScript : MonoBehaviour
 {
     [SerializeField] private Transform _tip;
-    [SerializeField] private int _penSize = 5;
+    [SerializeField] private int _penSize = 10;
 
     private Renderer _renderer;
     private Color[] _colors;
@@ -17,27 +17,42 @@ public class WhiteBoardMarkerScript : MonoBehaviour
     private Vector2 _touchPos, _lastTouchPos;
     private bool _touchedLastFrame;
     private Quaternion _lastTouchRot;
+    private Color _initialWhiteboardColor;
+
     void Start()
     {
-        _renderer = GetComponent<Renderer>();
+        _renderer = _tip.GetComponent<Renderer>();
+        _renderer.material.color = Color.blue;
         _colors = Enumerable.Repeat(_renderer.material.color, _penSize * _penSize).ToArray();
         _tipHeight = _tip.localScale.y;
+
+        // Get the whiteboard script and store its initial color
+        _whiteboard = FindObjectOfType<WhiteBoardScript>();
+        if (_whiteboard != null)
+        {
+            // Get the material attached to the whiteboard GameObject
+            Renderer renderer = _whiteboard.GetComponent<Renderer>();
+            if (renderer != null)
+            {
+                _initialWhiteboardColor = renderer.material.color;
+            }
+        }
+        _whiteboard = null;
     }
 
     void Update()
     {
-        Draw(Get_whiteboard());
+        Draw();
     }
 
-    private WhiteBoardScript Get_whiteboard()
-    {
-        return _whiteboard;
-    }
+    
+ 
 
-    private void Draw(WhiteBoardScript _whiteboard)
+    private void Draw()
     {
         if(Physics.Raycast(_tip.position, transform.up, out _touch, _tipHeight))
         {
+            Debug.Log("hit");
             if (_touch.transform.CompareTag("WhiteBoard"))
             {
                 if (_whiteboard == null)
@@ -59,7 +74,7 @@ public class WhiteBoardMarkerScript : MonoBehaviour
                 {
                     _whiteboard.texture.SetPixels(x, y, _penSize, _penSize, _colors);
 
-                    for(float f = 0.01f; f < 1.00f; f += 0.01f)
+                    for(float f = 0.01f; f < 1.00f; f += 0.05f)
                     {
                         var lerpX = (int)Mathf.Lerp(_lastTouchPos.x, x, f);
                         var lerpY = (int)Mathf.Lerp(_lastTouchPos.y, y, f);
@@ -80,5 +95,85 @@ public class WhiteBoardMarkerScript : MonoBehaviour
 
         _whiteboard = null;
         _touchedLastFrame = false;
+    }
+
+    public void SetPenSize(float size)
+    {
+        // Ensure that _renderer and _colors are properly initialized
+        if (_renderer == null || _colors == null)
+        {
+            Start();
+        }
+
+        _penSize = Mathf.RoundToInt((size * 10)+5);  // Scale slider value to pen size
+        _colors = Enumerable.Repeat(_renderer.material.color, _penSize * _penSize).ToArray();  // Update color array
+    }
+
+    public void RedColor()
+    {
+        // Ensure that _renderer is properly initialized
+        if (_renderer == null)
+        {
+            _renderer = _tip.GetComponent<Renderer>();
+        }
+
+        // Change the color of the renderer to red
+        _renderer.material.color = Color.red;
+    }
+
+    public void BlueColor()
+    {
+        // Ensure that _renderer is properly initialized
+        if (_renderer == null)
+        {
+            _renderer = _tip.GetComponent<Renderer>();
+        }
+
+        // Change the color of the renderer to blue
+        _renderer.material.color = Color.blue;
+    }
+
+    public void BlackColor()
+    {
+        // Ensure that _renderer is properly initialized
+        if (_renderer == null)
+        {
+            _renderer = _tip.GetComponent<Renderer>();
+        }
+
+        // Change the color of the renderer to black
+        _renderer.material.color = Color.black;
+    }
+
+    public void eraser()
+    {
+        // Ensure that _renderer is properly initialized
+        if (_renderer == null)
+        {
+            _renderer = _tip.GetComponent<Renderer>();
+        }
+
+        // Change the color of the renderer to the whiteboardcolor
+        if(_initialWhiteboardColor != null)
+        {
+            _renderer.material.color = _initialWhiteboardColor;
+        }
+    }
+
+    public void ResetWhiteBoard()
+    {
+        _whiteboard = FindObjectOfType<WhiteBoardScript>();
+        if (_whiteboard != null)
+        {
+            // Create an array of colors with each pixel set to _initialWhiteboardColor
+            Color[] blankColors = Enumerable.Repeat(_initialWhiteboardColor, _whiteboard.texture.width * _whiteboard.texture.height).ToArray();
+
+            // Set the pixels of the texture to the array of blank colors
+            _whiteboard.texture.SetPixels(blankColors);
+
+            // Apply the changes to the texture
+            _whiteboard.texture.Apply();
+        }
+        _whiteboard = null;
     }
 }
