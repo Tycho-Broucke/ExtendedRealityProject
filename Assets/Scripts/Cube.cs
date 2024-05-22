@@ -25,17 +25,15 @@ public class Cube : MonoBehaviour
 
     public void MoveUpDown(float amount)
     {
-        print(startPosition);
-        float yPosition = Mathf.Lerp(startPosition.y, startPosition.y + 1f, amount);
+        float yPosition = Mathf.Lerp( 1f, 0, amount);
 
-        transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
+        transform.position = new Vector3(transform.position.x, startPosition.y + yPosition, transform.position.z);
     }
 
     public void MoveLeftRight(float amount)
     {
-        print(startPosition);
-        float xPosition = Mathf.Lerp(startPosition.x, startPosition.x + 0.88f, amount);
+        float xPosition = Mathf.Lerp(0, 0.88f, amount);
 
-        transform.position = new Vector3(xPosition, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x + xPosition, transform.position.y, transform.position.z);
     }
 }
