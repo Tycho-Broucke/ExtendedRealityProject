@@ -17,7 +17,7 @@ public class ExerciseManager : MonoBehaviour
     // add differtent sentences to display
     private string[] sentencesToDisplay =
     {
-        "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG",
+        "THE BROWN FOX JUMPS OVER THE LAZY DOG",
         "you see what you believe",
         "ThIs iS aN exaMplE sEnTencE, tHat hAs 12345 NumbERS, and ,.';/][ sy$mbols.",
     };
