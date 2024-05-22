@@ -57,7 +57,7 @@ public class WhiteBoardMarkerScript : MonoBehaviour
 
     private void Draw()
     {
-        if(Physics.Raycast(_tip.position, transform.up, out _touch, _tipHeight))
+        if(Physics.Raycast(_tip.position, transform.up, out _touch))
         {
             Debug.Log("hit");
             if (_touch.transform.CompareTag("WhiteBoard"))
