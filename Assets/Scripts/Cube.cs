@@ -27,14 +27,15 @@ public class Cube : MonoBehaviour
 
     public void MoveUpDown(float amount)
     {
-        transform.position += 2 * amount * Vector3.up;
+        float yPosition = (1 - amount) * 2;
+        transform.position = new Vector3(transform.position.x, transform.position.y + yPosition, transform.position.z);
     }
 
     public void MoveLeftRight(float amount)
     {
         float xPosition = Mathf.Lerp(0.44f, -0.44f, amount);
 
-        transform.position = new Vector3(transform.position.x, transform.position.y, xPosition - 2.7f);
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + xPosition);
     }
 
     public void RotateAroundX(float amount)
