@@ -11,13 +11,6 @@ public class Cube : MonoBehaviour
 
     void Start()
     {
-        if (!TryGetComponent<MeshRenderer>(out cubeRenderer))
-        {
-            Debug.LogError("Object does not have a MeshRenderer component.");
-        }
-
-        cubeRenderer.material.color = new Color(50, 50, 50);
-
         startPosition = transform.position;
     }
 
@@ -27,7 +20,7 @@ public class Cube : MonoBehaviour
         float g = Random.value;
         float b = Random.value;
 
-        cubeRenderer.material.color = new Color(r, g, b);
+        cubeRenderer.material.SetColor("Color", new Color(r, g, b));
     }
 
     public void MoveUpDown(float amount)
@@ -41,13 +34,6 @@ public class Cube : MonoBehaviour
     {
         float xPosition = Mathf.Lerp(0.44f, -0.44f, amount);
 
-        transform.position = new Vector3(transform.position.x, transform.position.y, xPosition - 2.7f);
-    }
-
-    public void RotateAroundX(float amount)
-    {
-        float xPosition = Mathf.Lerp(0.44f, -0.44f, amount);
-
-        transform.position = new Vector3(transform.position.x, transform.position.y, xPosition - 2.7f);
+        transform.position = new Vector3(transform.position.x, transform.position.y, startPosition.z + xPosition);
     }
 }
