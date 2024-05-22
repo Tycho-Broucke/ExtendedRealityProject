@@ -12,6 +12,8 @@ public class ExerciseManager : MonoBehaviour
     public Button restartButton;  // restart button
 
     private string correctSentence;
+    private int currentSentenceIndex = 0;
+
     // add differtent sentences to display
     private string[] sentencesToDisplay =
     {
@@ -22,22 +24,34 @@ public class ExerciseManager : MonoBehaviour
 
     void Start()
     {
-        // randomly select a sentence from the array
-        correctSentence = sentencesToDisplay[Random.Range(0, sentencesToDisplay.Length)];
-        // correctSentence = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"; // Set the sentence
-        exerciseText.text = correctSentence;
+        LoadNewSentence();
         doneButton.onClick.AddListener(CheckInput);
         restartButton.onClick.AddListener(RestartExercise);
-
         resultsText.text = "";
     }
+    void LoadNewSentence()
+    {
+        if (currentSentenceIndex < sentencesToDisplay.Length)
+        {
+            correctSentence = sentencesToDisplay[currentSentenceIndex];
+            exerciseText.text = correctSentence;
+        }
+        else
+        {
+            // Optionally handle the scenario where all sentences have been used
+            exerciseText.text = "Well done! You've completed all exercises.";
+            inputField.gameObject.SetActive(false);
+            doneButton.gameObject.SetActive(false);
+            resultWindow.SetActive(false);
+        }
+    }
+
 
     void CheckInput()
     {
         int correctCount = 0;
         string userInput = inputField.text;
 
-        // Ensure we compare the shorter length to avoid index out of range issues
         int comparisonLength = Mathf.Min(userInput.Length, correctSentence.Length);
 
         for (int i = 0; i < comparisonLength; i++)
@@ -48,20 +62,22 @@ public class ExerciseManager : MonoBehaviour
             }
         }
 
-        // Count missing characters as errors
         int totalCharacters = correctSentence.Length;
-        int errorCount = totalCharacters - correctCount; // Mistakes include wrong and missing characters
-
-        // Calculate correctness percentage
         float correctness = (correctCount / (float)totalCharacters) * 100;
-
         resultsText.text = $"You scored {correctness}% correctness.";
 
         ShowResultWindow(correctness);
 
-        inputField.gameObject.SetActive(false); // Hide the keyboard/input field
-        doneButton.gameObject.SetActive(false); // Optionally hide the done button
+        inputField.gameObject.SetActive(false);
+        doneButton.gameObject.SetActive(false);
+
+        if (correctness == 100)
+        {
+            currentSentenceIndex++; // Move to the next sentence
+            RestartExercise(); // Call RestartExercise to setup for the next sentence
+        }
     }
+
     public GameObject resultWindow; // Assign this in inspector. This should be your UI panel for results.
 
     void ShowResultWindow(float correctness)
@@ -85,16 +101,17 @@ public class ExerciseManager : MonoBehaviour
 
     public void RestartExercise()
     {
-        inputField.text = ""; // Clear the input field
-        resultsText.text = ""; // Clear the results text
+        if (currentSentenceIndex < sentencesToDisplay.Length)
+        {
+            LoadNewSentence();  // Load the next sentence
+        }
 
-        inputField.gameObject.SetActive(true); // Show the input field again
+        inputField.text = "";
+        resultsText.text = "";
+        resultWindow.SetActive(false);
+        inputField.gameObject.SetActive(true);
+        doneButton.gameObject.SetActive(true);
         inputField.ForceLabelUpdate();
-        // resultsMessage.gameObject.SetActive(false); // Hide the result window
-        resultWindow.SetActive(false); // Hide the result window
-        doneButton.gameObject.SetActive(true); // Show the done button again
-
-        // Optionally, reset any other states or variables if needed
-
     }
+
 }
