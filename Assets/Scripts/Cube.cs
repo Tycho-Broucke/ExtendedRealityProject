@@ -34,6 +34,6 @@ public class Cube : MonoBehaviour
     {
         float xPosition = Mathf.Lerp(0, 0.88f, amount);
 
-        transform.position = new Vector3(transform.position.x + xPosition, transform.position.y, transform.position.z);
+        transform.position = new Vector3(startPosition.x + xPosition, transform.position.y, transform.position.z);
     }
 }
