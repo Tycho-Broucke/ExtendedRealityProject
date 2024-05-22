@@ -31998,7 +31998,7 @@ MonoBehaviour:
   VaderModel: {fileID: 2123738395}
   SaturnusModel: {fileID: 1380557666}
   BikeModel: {fileID: 446875386}
-  ElephantModel: {fileID: 446875386}
+  ElephantModel: {fileID: 1419191559}
   CalculatorModel: {fileID: 129611757}
   GoldModel: {fileID: 418666209}
   PlaneModel: {fileID: 351131201}
@@ -39058,6 +39058,11 @@ PrefabInstance:
 --- !u!4 &1419191558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 78b8961af942c97478c709e6f6ce9dd5, type: 3}
+  m_PrefabInstance: {fileID: 1419191557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1419191559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 78b8961af942c97478c709e6f6ce9dd5, type: 3}
   m_PrefabInstance: {fileID: 1419191557}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1421326803
