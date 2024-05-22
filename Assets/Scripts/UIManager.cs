@@ -191,7 +191,7 @@ public class UIManager : MonoBehaviour
             if (currentQuestionIndex == 0)
             {
                 currentFigure = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                currentFigure.transform.position = tableTransform.position + new Vector3(0, 0.6f, 0); // Adjust position to be a bit above the table
+                currentFigure.transform.position = tableTransform.position + new Vector3(0, 0.8f, 0); // Adjust position to be a bit above the table
                 currentFigure.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); // Make the sphere smaller
             }
             else if (currentQuestionIndex == 1 && flagOfSpainModel != null)
